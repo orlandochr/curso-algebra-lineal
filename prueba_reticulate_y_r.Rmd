@@ -1,0 +1,41 @@
+---
+title: "R & Python"
+author: "Orlando Chaparro"
+date: "16/5/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Reticulate
+
+
+```{r}
+library(reticulate)
+use_python("C:/ProgramData/Anaconda3/python.exe")
+# use_python("C:\ProgramData\Anaconda3\python.exe")
+# use_python("C:/Users/HP/AppData/Local/r-miniconda/envs/r-reticulate/python.exe")
+
+
+py_config()
+os <- import("os")
+os$listdir(".")
+
+
+
+```
+```{r}
+np <- import("numpy", convert = FALSE)
+
+x <- np$array(c(1:4))
+sum <- x$cumsum()
+
+print(sum)
+py_to_r(sum)
+
+```
+

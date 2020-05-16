@@ -1,0 +1,49 @@
+---
+title: "Prueba2"
+author: "Orlando Chaparro"
+date: "16/5/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+  knitr::opts_chunk$set(engine.path = list(octave = "c:/Octave/Octave-5.2.0/mingw64/bin/octave-cli-5.2.0.exe"))
+library(magic)
+
+
+```
+
+# Prueba de cuadrados mágicos
+
+Vamos a hacer un cuadrado magico de tamaño 6
+
+```{r}
+
+magic(6)
+
+```
+
+Lo siguiente es un ejemplo en python : 
+
+```{python, include=FALSE}
+import numpy as np
+```
+
+
+```{python}
+
+x = np.abs(-5)
+print(x)
+
+
+
+```
+
+Estas ultimas instrucciones son en Octave
+```{octave}
+
+z1 = complex(1,2)
+class(z1)
+
+```
+
